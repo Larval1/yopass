@@ -15,7 +15,7 @@ REACT_APP_BACKEND_URL='http://localhost:1337' yarn start
 ```bash
 PUBLIC_URL='https://my-domain.com' REACT_APP_BACKEND_URL='http://api.my-domain.com' yarn build
 
-PUBLIC_URL='https://ots.group24.de' REACT_APP_BACKEND_URL='https://ots.group24.de/api' yarn build
+PUBLIC_URL='https://ots.group24.de' REACT_APP_BACKEND_URL='https://api.yopass.se' yarn build
 ```
 
 Upload contents of `build/` to your CDN or hosting provider of choice, be it S3, Netlify or GCS.
