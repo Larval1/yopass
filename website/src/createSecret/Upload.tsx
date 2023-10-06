@@ -110,11 +110,11 @@ const Upload = () => {
             <Typography variant="h4">{t('upload.title')}</Typography>
           </Grid>
           <Grid container justifyContent="center">
-            <Typography variant="caption" display="block">
+            <Typography variant="caption" display="block" fontSize="20px" marginBottom="50px">
               {t('upload.caption')}
             </Typography>
           </Grid>
-          <Grid container justifyContent="center">
+          <Grid container justifyContent="center" marginBottom="50px">
             <FontAwesomeIcon
               color={isDragActive ? 'blue' : 'black'}
               size="8x"
@@ -122,17 +122,16 @@ const Upload = () => {
             />
           </Grid>
         </div>
-
         <Grid container justifyContent="center" mt="15px">
           <Expiration control={control} />
         </Grid>
         <Grid container alignItems="center" direction="column">
-          <OneTime control={control} />
           <SpecifyPasswordToggle control={control} />
           <Grid container justifyContent="center">
             {!generateDecryptionKey && (
               <SpecifyPasswordInput control={control} />
             )}
+            <OneTime control={control} />
           </Grid>
         </Grid>
       </form>

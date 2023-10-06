@@ -3,8 +3,6 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
 import { Header } from './shared/Header';
 import { Routing } from './Routing';
-import { Features } from './shared/Features';
-import { Attribution } from './shared/Attribution';
 import { theme } from './theme';
 import { HashRouter } from 'react-router-dom';
 
@@ -25,8 +23,6 @@ const App = () => {
           <Header />
           <Container maxWidth={'lg'}>
             <Routing />
-            <Features />
-            <Attribution />
           </Container>
         </HashRouter>
       </ThemeProvider>
