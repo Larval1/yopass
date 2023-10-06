@@ -48,6 +48,7 @@ export const uploadFile = async (body: any): Promise<Response> => {
 
 const post = async (url: string, body: any): Promise<Response> => {
   console.log(url);
+  console.log(fetch(url));
   const request = await fetch(url, {
     body: JSON.stringify(body),
     method: 'POST',
