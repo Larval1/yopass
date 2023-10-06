@@ -70,6 +70,12 @@
     "optionOneDayLabel": "One Day",
     "optionOneWeekLabel": "One Week"
   },
+  "strength": {
+    "legend" : "Determine Password strenght",
+    "optionWeak": "weak",
+    "optionNormal": "normal",
+    "optionStrong" : "strong"
+  },
   "features": {
     "title": "Share Secrets Securely With Ease",
     "subtitle": "Yopass is created to reduce the amount of clear text passwords stored in email and chat conversations by encrypting and generating a short lived link which can only be viewed once.",

@@ -5,4 +5,10 @@ export const theme = createTheme({
   palette: {
     primary: blueGrey,
   },
+  typography: {
+    fontFamily: [
+      'Titillium Web'
+    ].join(','),
+  },
+
 });

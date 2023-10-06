@@ -19,10 +19,12 @@ import {
   Grid,
   Box,
   InputLabel,
+  formControlClasses,
 } from '@mui/material';
 import { faThList } from '@fortawesome/free-solid-svg-icons';
 import { Form } from 'react-router-dom';
 import Secret from '../displaySecret/Secret';
+import Strength from '../shared/Strength';
 
 const CreateSecret = () => {
   const { t } = useTranslation();
@@ -56,8 +58,18 @@ const CreateSecret = () => {
   const [secret, setSecret] = useState("");
 
   const generatePassword = async (form: any): Promise<void> => {
+    console.log(form.strength);
+    var apiUrl = "";
+
+    if (form.strength == "1")
+      apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=8";
+    else if (form.strength == "2")
+      apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=10&sym=true";
+    else if (form.strength == "3")
+      apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=15&sym=true";
+
     try {
-      const fetched = await fetch("https://makemeapassword.ligos.net/api/v1/alphanumeric/json");
+      const fetched = await fetch(apiUrl);
       const temp = await fetched.json();
       setSecret(temp["pws"][0]);
     }
@@ -121,6 +133,29 @@ const CreateSecret = () => {
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container justifyContent="center" paddingTop={1}>
+        <Grid container justifyContent="center" marginTop={2}>
+            <Strength control={control} />
+          </Grid>
+          <Box p={2} pb={4}>
+          
+            <Button
+                onClick={() => handleSubmit(generatePassword)()}
+                variant="contained"
+                disabled={loading}
+                sx={{ 
+                  borderRadius: "20px",
+                  backgroundImage: "linear-gradient(45deg,#0096bb,#6cbe99)",
+                  fontSize: "16px",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                  paddingLeft:"35px",
+                  paddingRight: "35px",
+                  fontWeight:'700'
+                }}
+              >
+                  <span>{t('create.buttonCreateSecret')}</span>
+              </Button>
+          </Box>
           <Controller
             name="secret"
             control={control}
@@ -155,24 +190,6 @@ const CreateSecret = () => {
           <Grid container justifyContent="center">
             <Box p={2} pb={4}>
               <Button
-                onClick={() => handleSubmit(generatePassword)()}
-                variant="contained"
-                disabled={loading}
-                sx={{ 
-                  borderRadius: "20px",
-                  backgroundImage: "linear-gradient(45deg,#0096bb,#6cbe99)",
-                  fontSize: "16px",
-                  paddingTop: "10px",
-                  paddingBottom: "10px",
-                  paddingLeft:"35px",
-                  paddingRight: "35px"
-                }}
-              >
-                  <span>{t('create.buttonCreateSecret')}</span>
-              </Button>
-            </Box>
-            <Box p={2} pb={4}>
-              <Button
                 onClick={() => handleSubmit(onSubmit)()}
                 variant="contained"
                 disabled={loading}
@@ -183,7 +200,8 @@ const CreateSecret = () => {
                   paddingTop: "10px",
                   paddingBottom: "10px",
                   paddingLeft:"35px",
-                  paddingRight: "35px"
+                  paddingRight: "35px",
+                  fontWeight:'700'
                 }}
               >
                 {loading ? (

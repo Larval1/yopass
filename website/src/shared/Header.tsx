@@ -44,7 +44,9 @@ export const Header = () => {
               paddingTop: "10px",
               paddingBottom: "10px",
               paddingLeft:"35px",
-              paddingRight: "35px"
+              paddingRight: "35px",
+              fontFamily:'Titillium Web',
+              fontWeight:'700'
             }}
           >
             {isOnUploadPage ? t('header.buttonHome') : t('header.buttonUpload')}

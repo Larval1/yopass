@@ -4,11 +4,11 @@
     "inputSecretLabel": "Geheime Nachricht",
     "inputSecretPlaceholder": "Nachricht, die im Browser verschlüsselt werden soll.",
     "buttonEncrypt": "Nachricht verschlüsseln",
-    "buttonCreateSecret": "Nachricht generieren", 
+    "buttonCreateSecret": "Passwort generieren", 
     "buttonEncryptLoading": "Verschlüssele Nachricht...",
     "inputOneTimeLabel": "Einmaldownload",
     "inputPasswordLabel": "Benutzerdefiniertes Zugriffspasswort",
-    "inputGenerateLabel": "Zugriffspasswort automatisch generieren"
+    "inputGenerateLabel": "Zugriffstoken automatisch generieren"
   },
   "upload": {
     "title": "Datei ablegen zum Upload...",
@@ -18,11 +18,11 @@
   "display": {
     "titleFetching": "Datenbank wird gelesen, bitte warten...",
     "titleDecrypting": "Geheimnis wird entschlüsselt, bitte warten...",
-    "titleDecryptionKey": "Zugriffspasswort eingeben",
+    "titleDecryptionKey": "Zugriffstoken eingeben",
     "captionDecryptionKey": "Bitte Seite nicht neu laden. Das Geheimnis könnte auf einen einmaligen Abruf beschränkt sein.",
-    "inputDecryptionKeyPlaceholder": "Zugriffspasswort",
-    "inputDecryptionKeyLabel": "Ein Zugriffspasswort ist erforderlich. Bitte unten eingeben.",
-    "errorInvalidPassword": "Ungültiger Zugriffspasswort, bitte erneut versuchen",
+    "inputDecryptionKeyPlaceholder": "Zugriffstoken",
+    "inputDecryptionKeyLabel": "Ein Zugriffstoken ist erforderlich. Bitte unten eingeben.",
+    "errorInvalidPassword": "Ungültiger Zugriffstoken, bitte erneut versuchen",
     "buttonDecrypt": "Geheimnis entschlüsseln"
   },
   "error": {
@@ -39,10 +39,10 @@
   "result": {
     "title": "Geheimnis in Datenbank gespeichert",
     "subtitleDownloadOnce": "Bitte denke dran, das auf ein Geheimnis möglicherweise nur einmal zugegriffen werden kann. Öffne den Link also nicht selbst.",
-    "subtitleChannel": "Das Zugriffspasswort kann sicherheitshalber auf einem anderen Kanal übermittelt werden.",
-    "rowLabelOneClick": "Link mit Zugriffspasswort",
+    "subtitleChannel": "Das Zugriffstoken kann sicherheitshalber auf einem anderen Kanal übermittelt werden.",
+    "rowLabelOneClick": "Link mit Zugriffstoken",
     "rowLabelShortLink": "Einfacher Link",
-    "rowLabelDecryptionKey": "Zugriffspasswort"
+    "rowLabelDecryptionKey": "Zugriffstoken"
   },
   "secret": {
     "titleFile": "Datei heruntergeladen",
@@ -70,6 +70,12 @@
     "optionOneHourLabel": "Eine Stunde",
     "optionOneDayLabel": "Ein Tag",
     "optionOneWeekLabel": "Eine Woche"
+  },
+  "strength": {
+    "legend" : "Eine Passwortstärke festlegen",
+    "optionWeak": "Schwach",
+    "optionNormal": "Normal",
+    "optionStrong" : "Stark"
   },
   "features": {
     "title": "Geheimnisse sicher und einfach teilen",

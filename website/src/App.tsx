@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} >
         <HashRouter>
           <Header />
           <Container maxWidth={'lg'}>
