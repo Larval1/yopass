@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
+import { Footer } from './shared/Footer';
 import { Header } from './shared/Header';
 import { Routing } from './Routing';
 import { theme } from './theme';
@@ -24,6 +25,7 @@ const App = () => {
           <Container maxWidth={'lg'}>
             <Routing />
           </Container>
+          <Footer />
         </HashRouter>
       </ThemeProvider>
     </StyledEngineProvider>
