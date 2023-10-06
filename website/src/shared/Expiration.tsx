@@ -23,6 +23,7 @@ export const Expiration = (props: { control: Control<any> }) => {
             {...field}
             row
             sx={{
+              justifyContent: 'center',
               root: {
                 radioGroup: {
                   justifyContent: 'center',
