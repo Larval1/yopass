@@ -1,0 +1,10 @@
+name: ots-upload
+run-name: ${{ github.actor }} is updating gr24OneTimeSecret
+on: [push]
+jobs:
+    upload:
+        runs-on: self-hosted
+        steps:
+            - run: mkdir test
+
+        
