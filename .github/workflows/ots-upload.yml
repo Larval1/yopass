@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          bash /web/yopass/.scripts/deploy.sh
+          bash ../../web/yopass/.scripts/deploy.sh
