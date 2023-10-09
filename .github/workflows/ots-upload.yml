@@ -1,10 +1,17 @@
-name: ots-upload
-run-name: ${{ github.actor }} is updating gr24OneTimeSecret
-on: [push]
-jobs:
-    uploadOTS:
-        runs-on: ubuntu-latest
-        steps:
-            - run: mkdir test
+name: OTS Deploy 
+on: pull_request
 
-        
+jobs:
+  deploying:
+    if: ${{ github.event.pull_request.merged }}
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Run deployment script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          bash /web/yopass/.scripts/deploy.sh
