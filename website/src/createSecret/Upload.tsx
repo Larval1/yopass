@@ -107,10 +107,10 @@ const Upload = () => {
         <div {...getRootProps()}>
           <input {...getInputProps()} />
           <Grid container justifyContent="center">
-            <Typography variant="h4">{t('upload.title')}</Typography>
+            <Typography variant="h4" fontWeight="600">{t('upload.title')}</Typography>
           </Grid>
           <Grid container justifyContent="center">
-            <Typography variant="caption" display="block" fontSize="20px" marginBottom="50px">
+            <Typography variant="caption" display="block" fontSize="20px" marginBottom="50px" color="#626d78">
               {t('upload.caption')}
             </Typography>
           </Grid>

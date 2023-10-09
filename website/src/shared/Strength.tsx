@@ -12,7 +12,7 @@ export const Strength = (props: { control: Control<any> }) => {
   const { t } = useTranslation();
   return (
     <FormControl component="fieldset" margin="dense" sx={{ fontFamily:'Titillium Web' }}>
-      <FormLabel sx={{textAlign:"center", fontFamily:'Titillium Web'}} component="legend">{t('strength.legend')}</FormLabel>
+      <FormLabel sx={{textAlign:"center", color:"#626d78"}} component="legend">{t('strength.legend')}</FormLabel>
       <Controller
         rules={{ required: true }}
         control={props.control}
@@ -24,6 +24,7 @@ export const Strength = (props: { control: Control<any> }) => {
             row
             sx={{
               justifyContent: 'center',
+              color:"#626d78",
               root: {
                 radioGroup: {
                   justifyContent: 'center',

@@ -10,5 +10,4 @@ export const theme = createTheme({
       'Titillium Web'
     ].join(','),
   },
-
 });

@@ -128,16 +128,15 @@ const CreateSecret = () => {
         message={errors.secret?.message}
         onClick={() => clearErrors('secret')}
       />
-      <Typography component="h1" variant="h4" align="center">
+      <Typography component="h1" variant="h4" align="center" sx={{fontWeight:600}}>
         {t('create.title')}
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid container justifyContent="center" paddingTop={1}>
-        <Grid container justifyContent="center" marginTop={2}>
+        <Grid container justifyContent="center">
+          <Grid container justifyContent="center">
             <Strength control={control} />
           </Grid>
-          <Box p={2} pb={4}>
-          
+          <Box pb={2}>
             <Button
                 onClick={() => handleSubmit(generatePassword)()}
                 variant="contained"
@@ -151,8 +150,7 @@ const CreateSecret = () => {
                   paddingLeft:"35px",
                   paddingRight: "35px",
                   fontWeight:'700'
-                }}
-              >
+                }}>
                   <span>{t('create.buttonCreateSecret')}</span>
               </Button>
           </Box>
@@ -176,7 +174,7 @@ const CreateSecret = () => {
               />
             )}
           />
-          <Grid container justifyContent="center" marginTop={2}>
+          <Grid container justifyContent="center">
             <Expiration control={control} />
           </Grid>
           <Grid container alignItems="center" direction="column">
@@ -188,7 +186,7 @@ const CreateSecret = () => {
             <OneTime control={control} />
           </Grid>
           <Grid container justifyContent="center">
-            <Box p={2} pb={4}>
+            <Box>
               <Button
                 onClick={() => handleSubmit(onSubmit)()}
                 variant="contained"
@@ -222,7 +220,7 @@ export const OneTime = (props: { control: Control<any> }) => {
   const { t } = useTranslation();
 
   return (
-    <Grid item justifyContent="center">
+    <Grid item justifyContent="center" sx={{color:"#626d78"}}>
       <FormControlLabel
         control={
           <Controller
@@ -248,7 +246,7 @@ export const SpecifyPasswordInput = (props: { control: Control<any> }) => {
   const { t } = useTranslation();
   return (
     <Grid item justifyContent="center">
-      <InputLabel>{t('create.inputPasswordLabel')}</InputLabel>
+      <InputLabel sx={{color:"#626d78"}}>{t('create.inputPasswordLabel')}</InputLabel>
       <Controller
         name="password"
         control={props.control}
@@ -274,7 +272,7 @@ export const SpecifyPasswordInput = (props: { control: Control<any> }) => {
 export const SpecifyPasswordToggle = (props: { control: Control<any> }) => {
   const { t } = useTranslation();
   return (
-    <FormGroup>
+    <FormGroup sx={{color:"#626d78"}}>
       <FormControlLabel
         control={
           <Controller

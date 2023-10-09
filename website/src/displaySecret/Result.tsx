@@ -30,8 +30,8 @@ const Result = ({ uuid, password, prefix, customPassword }: ResultProps) => {
 
   return (
     <Box>
-      <Typography variant="h4">{t('result.title')}</Typography>
-      <Typography>
+      <Typography variant="h4" sx={{fontWeight:600}}>{t('result.title')}</Typography>
+      <Typography sx={{color:"#626d78"}} mb={3}>
         {t('result.subtitleDownloadOnce')}
         <br />
         {t('result.subtitleChannel')}
@@ -68,7 +68,7 @@ const Row = ({ label, value }: RowProps) => {
     <TableRow key={label}>
       <TableCell width="15">
         <Button
-          color={copy.error ? 'secondary' : 'primary'}
+          sx={{backgroundImage: "linear-gradient(45deg,#0096bb,#6cbe99)"}}
           variant="contained"
           onClick={() => copyToClipboard(value)}
         >
