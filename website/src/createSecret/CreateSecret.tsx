@@ -66,7 +66,7 @@ const CreateSecret = () => {
     else if (form.strength == "2")
       apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=10&sym=true";
     else if (form.strength == "3")
-      apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=15&sym=true";
+      apiUrl = "https://makemeapassword.ligos.net/api/v1/alphanumeric/json?l=20&sym=true";
 
     try {
       const fetched = await fetch(apiUrl);
