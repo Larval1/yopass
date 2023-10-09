@@ -1,5 +1,5 @@
 name: OTS Deploy 
-on: pull_request
+on: push
 
 jobs:
   deploying:
