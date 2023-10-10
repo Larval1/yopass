@@ -1,11 +1,14 @@
 name: OTS Deploy 
-on: workflow_dispatch
+on: 
+  pull_request: 
+    branches:
+      - main
 
 jobs:
   deploying:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
-
     - name: Run deployment script
       uses: appleboy/ssh-action@master
       with:
